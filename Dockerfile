@@ -13,4 +13,4 @@ LABEL description="Docker image with preinstalled ssh-client" \
 RUN apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get -q -y install openssh-client \
   && mkdir -p ~/.ssh \
-  && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  && echo "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
